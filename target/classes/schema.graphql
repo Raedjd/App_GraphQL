@@ -1,0 +1,17 @@
+type Logement{
+   reference:Int
+   adresse:String
+   gouvernorat:String
+   prix: float
+}
+
+type Query {
+ allLogments:[Logement]
+}
+type Mutation {
+createLogement(reference:Int,adresse:String):Logement
+}
+schema {
+query:Query
+mutation:Mutation
+}
